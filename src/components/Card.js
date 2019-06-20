@@ -5,7 +5,6 @@ export default class Card extends Component {
   render() {
     const stock = this.props.stock
     return (
-    
           <div className="card 1 ">
             <div className="card_title title-white">
               <p>{stock.symbol}</p>
@@ -14,7 +13,6 @@ export default class Card extends Component {
               <p>{stock.lastSalePrice}</p>
             </div>
           </div>
-
     )
   }
 }
