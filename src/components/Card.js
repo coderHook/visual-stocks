@@ -6,8 +6,7 @@ export default class Card extends Component {
     const stock = this.props.stock
     return (
     
-          <div className="card 1 overlay">
-
+          <div className="card 1 ">
             <div className="card_title title-white">
               <p>{stock.symbol}</p>
             </div>
