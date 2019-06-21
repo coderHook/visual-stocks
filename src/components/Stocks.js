@@ -5,11 +5,11 @@ import { addStock, getStocks } from '../actions/stocksActions'
 
 const downJones = ['MMM', 'AXP', 'AAPL', 'BA', 'KO', 'CAT', 'CVX', 'CSCO', 'DIS', 'XOM', 'GE', 'GS', 'HD', 'IBM', 'INTC', 'JNJ', 'JPM', 'MCD', 'MRK', 'MSFT', 'NKE', 'PFE', 'PG', 'TRV', 'UTX', 'UNH', 'VZ', 'V', 'WMT']
 
+const myStocks = ['AAPL', 'FB', 'KO']
+
 class Stocks extends Component {
   componentDidMount(){
-
-      this.props.getStocks(downJones)
-
+    this.props.getStocks(downJones)
   }
   
   render() {
@@ -20,7 +20,7 @@ class Stocks extends Component {
         <h1>List of Stocks Downjones</h1>
         <div className="cards-list">
           { this.props.stocksReducer.stocks.map(stock => 
-              <Card key= {stock.symbol} stock={stock} />)
+              <Card key= {Object.keys(stock)} stock={Object.values(stock)} />)
           }
       </div>
       </div>
