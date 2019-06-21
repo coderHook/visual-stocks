@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import Card from './Card'
 import { connect } from 'react-redux';
-import { addStock, getStocks } from '../actions/stocksActions'
+import { getStocks, addFilter } from '../actions/stocksActions'
+import OptionsMenu from './OptionsMenu';
 
 const downJones = ['MMM', 'AXP', 'AAPL', 'BA', 'KO', 'CAT', 'CVX', 'CSCO', 'DIS', 'XOM', 'GE', 'GS', 'HD', 'IBM', 'INTC', 'JNJ', 'JPM', 'MCD', 'MRK', 'MSFT', 'NKE', 'PFE', 'PG', 'TRV', 'UTX', 'UNH', 'VZ', 'V', 'WMT']
 
 const myStocks = ['AAPL', 'FB', 'KO']
 
 class Stocks extends Component {
+
   componentDidMount(){
     this.props.getStocks(downJones)
   }
@@ -18,6 +20,9 @@ class Stocks extends Component {
     return (
       <div>
         <h1>List of Stocks Downjones</h1>
+
+        <OptionsMenu />
+
         <div className="cards-list">
           { this.props.stocksReducer.stocks.map(stock => 
               <Card key= {Object.keys(stock)} stock={Object.values(stock)} />)
@@ -34,4 +39,4 @@ export const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { addStock, getStocks })(Stocks)
+export default connect(mapStateToProps, { getStocks })(Stocks)

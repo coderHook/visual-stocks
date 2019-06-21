@@ -1,9 +1,10 @@
 .cards-list {
   z-index: 0;
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 80px auto;
 }
 
 .card {
