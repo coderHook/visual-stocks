@@ -8,7 +8,6 @@ class OptionsMenu extends Component {
   filterByColor = () => {
     const color = this.props.stocks.filter === 'green' ? 'red' : 'green' 
 
-    console.log('filterby', color)
     this.props.addFilter(color)
   }
   render() {

@@ -2,10 +2,10 @@ import * as request from 'superagent'
 export const GET_STOCKS = 'GET_STOCKS'
 export const ADD_FILTER = 'ADD_FILTER'
 
-const production = {
-  prefix: 'cloud',
-  token: 'pk_3c142f8394684e1ea69baa77935eb86d'
-}
+// const production = {
+//   prefix: 'cloud',
+//   token: 'pk_3c142f8394684e1ea69baa77935eb86d'
+// }
 
 const test = {
   prefix: 'sandbox',

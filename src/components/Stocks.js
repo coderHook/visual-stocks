@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Card from './Card'
 import { connect } from 'react-redux';
-import { getStocks, addFilter } from '../actions/stocksActions'
+import { getStocks } from '../actions/stocksActions'
 import OptionsMenu from './OptionsMenu';
 
 const downJones = ['MMM', 'AXP', 'AAPL', 'BA', 'KO', 'CAT', 'CVX', 'CSCO', 'DIS', 'XOM', 'GE', 'GS', 'HD', 'IBM', 'INTC', 'JNJ', 'JPM', 'MCD', 'MRK', 'MSFT', 'NKE', 'PFE', 'PG', 'TRV', 'UTX', 'UNH', 'VZ', 'V', 'WMT']
 
-const myStocks = ['AAPL', 'FB', 'KO']
+// const myStocks = ['AAPL', 'FB', 'KO']
 
 class Stocks extends Component {
 
